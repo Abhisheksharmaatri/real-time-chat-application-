@@ -2,3 +2,6 @@ app.js
 sensitive.js
 node_modules
 notes.md
+controllers
+queries.md
+routes

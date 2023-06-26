@@ -11,12 +11,12 @@ const chatRoomMessageSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Chat-Room',
         required: true
-    },
+    }, //Populate
     sender: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
-    }
+    } //Populate
 });
 
 module.exports = mongoose.model('Chat-Room-Message', chatRoomMessageSchema);

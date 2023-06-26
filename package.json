@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
     "mongoose": "^7.3.1"
   }
 }

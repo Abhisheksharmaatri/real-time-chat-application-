@@ -10,19 +10,30 @@ const chatRoomSchema = new Schema({
     encryptionKey: {
         type: String,
         required: true
-    },
-    userReferences: [{
+    }, //Secret
+    creator: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+        required: true
+    }, //Populate
+    description: {
+        type: String,
+        required: true
+    },
+    userReferences: [{
+        user: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
         status: {
             type: String,
             default: 'collaborator'
         }
-    }],
+    }], //Populate
     messageReferences: [{
         type: Schema.Types.ObjectId,
         ref: 'Chat-Room-Message'
-    }]
+    }] //Populate
 }, {
     timestamps: true,
     usePushEach: true,

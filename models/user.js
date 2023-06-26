@@ -14,21 +14,25 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    },
+    }, //Secret
     chatRoomReferences: [{
         type: Schema.Types.ObjectId,
         ref: 'Chat-Room'
-    }],
+    }], //Populate
     chatReferences: [{
         type: Schema.Types.ObjectId,
         ref: 'Individual-Chat'
-    }],
+    }], //Populate
     onlineStatus: {
         type: Boolean,
         default: false
     },
-    resetToken: String,
-    resetTokenExpiration: Date
+    verified: {
+        type: Boolean,
+        default: false
+    },
+    resetToken: String, //Secret
+    resetTokenExpiration: Date //Secret
 }, {
     timestamps: true,
     usePushEach: true,
